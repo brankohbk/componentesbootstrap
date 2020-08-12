@@ -7,13 +7,14 @@ window.addEventListener("load", () => {
   equipo && equipo != "todos" ? alumnasPorEquipo(equipo) : (equipo ? acordeonGrupos() : null);
 })
 
+
 function alumnasPorEquipo(equipo) {
   container.innerHTML = "";
   alumnas
     .filter(alumna => alumna.grupo == equipo)
     .forEach(alumna => {
       const card = document.createElement("div");
-      card.className = "card col-12 col-md-4 col-lg-3 m-3 px-0 border-success shadow-lg";
+      card.className = "card col-12 col-md-4 col-lg-3 m-3 px-0 border-info shadow-lg";
 
       const img = document.createElement("img");
       img.src = grupos[alumna.grupo].rutaFotos + alumna.foto;

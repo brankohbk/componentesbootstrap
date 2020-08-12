@@ -13,7 +13,10 @@
 <body class="d-flex flex-column justify-content-between">
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-orange">
-      <a class="navbar-brand" href="/"> <img src="img/logo.png" alt="Mindhub logo"> </a>
+      <a class="navbar-brand" href="index.html">
+        <img class="d-none d-md-inline" src="img/logo.png" alt="Mindhub logo"> 
+        <img class="d-inline d-md-none" src="img/isologo.png" alt="Mindhub logo">
+      </a>
       <span class="navbar-text">Demo de bootstrap</span>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -22,12 +25,12 @@
       <div class="collapse navbar-collapse" id="navbarMenu">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="index.html">Home</a>
           </li>
 
           <li class="nav-item dropleft active">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Equipos
+              Equipos <span class="sr-only">(current)</span>
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="alumnas.html?equipo=notfound">404 not found</a>
@@ -40,7 +43,7 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="mentores.html">Mentores</a>
+            <a class="nav-link" href="#" data-toggle="modal" data-target="#modalMentores">Mentores</a>
           </li>
         </ul>
 
@@ -63,11 +66,49 @@
     <span>Copyright &copy; 2020 | Mindhub </span>
     <span>Hecho con <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-heart-fill" fill="red" xmlns="http://www.w3.org/2000/svg">
       <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
-    </svg> por Branko Haberkon </span>
+    </svg> por <a class="text-white" target="_blank" rel="no-opener no-referrer" href="https://github.com/brankohbk">Branko Haberkon</a> </span>
   </footer>
 
 
 
+  <!-- MODAL -->
+
+  <div class="modal fade " id="modalMentores" tabindex="-1" aria-labelledby="modalMentoresLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalMentoresLabel">Mentores</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row justify-content-around">
+
+            <div class="card col-12 col-lg-5 p-0 shadow" >
+              <img src="https://github.com/brankohbk.png" class="card-img-top" alt="Branko Haberkon">
+              <div class="card-body">
+                <h5 class="card-title">Branko Haberkon</h5>
+                <p class="card-text">Founder in Restpoint.com.ar & Dreamcatcher.com.ar. <br> Geek, Box enthusiastic & heavy metal fan. <br> Trying to bring solutions to this problem-packed modern life.</p>
+                <a target="_blank" rel="no-opener no-referrer" href="https://github.com/brankohbk" class="btn btn-primary">Github</a>
+              </div>
+            </div>
+            <div class="card col-12 col-lg-5 p-0 shadow" >
+              <img src="https://github.com/rodrigr.png" style="object-position: bottom;" class="card-img-top" alt="Rodrigo García Ribeiro">
+              <div class="card-body">
+                <h5 class="card-title">Rodrigo García Ribeiro</h5>
+                <p class="card-text">Java Full-Stack Mentor in MindHub Bootcamp.</p>
+                <a target="_blank" rel="no-opener no-referrer" href="https://github.com/rodrigr" class="btn btn-primary">Github</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn bg-orange text-white" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

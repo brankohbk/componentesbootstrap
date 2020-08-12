@@ -1,27 +1,27 @@
 const grupos = {
   "notfound": {
     nombre: "404 Not found.",
-    rutaFotos: "../img/404/",
+    rutaFotos: "./img/404/",
     logo: "logo.jpg"
   },
   "cq": {
     nombre: "Code Queens.",
-    rutaFotos: "../img/cq/",
+    rutaFotos: "./img/cq/",
     logo: "logo.jpg"
   },
   "ctrlz": {
     nombre: "CTRL Z.",
-    rutaFotos: "../img/ctrlz/",
+    rutaFotos: "./img/ctrlz/",
     logo: "logo.png"
   },
   "pd": {
     nombre: "Programame el desayuno.",
-    rutaFotos: "../img/pd/",
+    rutaFotos: "./img/pd/",
     logo: "logo.png"
   },
   "semicolon": {
     nombre: "It was the semicolon.",
-    rutaFotos: "../img/semicolon/",
+    rutaFotos: "./img/semicolon/",
     logo: "logo.jpg"
   }
 }

@@ -1,7 +1,4 @@
-/* img {
-  max-height: 100px;
-  margin: 1em;
-} */
+
 
 .bg-orange{
   background-color: var(--orange);
@@ -20,19 +17,37 @@ main{
   background-color: #918c8c;
 
 }
+
+/* CAROUSEL */
 .carousel-item img{
   max-height: 70vh;
   object-fit: contain;
 }
 .carousel-caption{
-  background-color: rgba(255, 255, 255, 0.842);
-  
+  background-color: rgba(255, 255, 255, 0.842);  
+}
+.carousel-indicators li{
+  background-color: blueviolet;
+  transition: height .9s;
+}
+
+.carousel-indicators .active{
+  height: 5px;
+}
+
+.card{
+  overflow: hidden;
 }
 
 .card img{
   height: 300px;
   object-fit: cover;
   object-position: top;
+  transition: transform 0.7s;
+}
+
+.card:hover img{
+  transform: scale(1.05);
 }
 
 
