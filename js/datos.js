@@ -36,11 +36,11 @@ const alumnas = [
     grupo: "notfound",
     foto: "carolina.jpg"
   },
-  {
-    nombre: "Florencia Velázquez",
-    grupo: "notfound",
-    foto: "florencia.jpg"
-  },
+  // {
+  //   nombre: "Florencia Velázquez",
+  //   grupo: "notfound",
+  //   foto: "florencia.jpg"
+  // },
   {
     nombre: "Ma. Gabriela Vallenilla",
     grupo: "notfound",
@@ -51,11 +51,11 @@ const alumnas = [
     grupo: "notfound",
     foto: "veronica.jpg"
   },
-  {
-    nombre: "Yael Correa",
-    grupo: "notfound",
-    foto: "yael.jpg"
-  },
+  // {
+  //   nombre: "Yael Correa",
+  //   grupo: "notfound",
+  //   foto: "yael.jpg"
+  // },
   {
     nombre: "Andrea briceño",
     grupo: "cq",
@@ -101,11 +101,11 @@ const alumnas = [
     grupo: "ctrlz",
     foto: "johelda.jpg"
   },
-  {
-    nombre: "Luz Cuello",
-    grupo: "ctrlz",
-    foto: "luz.jpg"
-  },
+  // {
+  //   nombre: "Luz Cuello",
+  //   grupo: "ctrlz",
+  //   foto: "luz.jpg"
+  // },
   {
     nombre: "Magalí Grabow",
     grupo: "ctrlz",
@@ -136,11 +136,11 @@ const alumnas = [
     grupo: "pd",
     foto: "melissa.jpg"
   },
-  {
-    nombre: "Nicole Copa",
-    grupo: "pd",
-    foto: "nicole.jpg"
-  },
+  // {
+  //   nombre: "Nicole Copa",
+  //   grupo: "pd",
+  //   foto: "nicole.jpg"
+  // },
   {
     nombre: "Victoria Visoná",
     grupo: "pd",
@@ -171,11 +171,11 @@ const alumnas = [
     grupo: "semicolon",
     foto: "reyna.png"
   },
-  {
-    nombre: "Rocío Pidemunt",
-    grupo: "semicolon",
-    foto: "rocio.jpg"
-  }
+  // {
+  //   nombre: "Rocío Pidemunt",
+  //   grupo: "semicolon",
+  //   foto: "rocio.jpg"
+  // }
 ]
 
 
