@@ -1,37 +1,49 @@
 
 const container = document.getElementById("container");
+if(container){
+  window.addEventListener("load", () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const equipo = urlParams.get('equipo');
+    equipo && equipo != "todos" ? alumnasPorEquipo(equipo) : (equipo ? acordeonGrupos() : todas());
+  })
+}
 
-window.addEventListener("load", () => {
-  const urlParams = new URLSearchParams(window.location.search);
-  const equipo = urlParams.get('equipo');
-  equipo && equipo != "todos" ? alumnasPorEquipo(equipo) : (equipo ? acordeonGrupos() : todas());
-})
+function sacarApellido(nombreCompleto) {
+  let array = nombreCompleto.split(" ");
+  let nombre = `${array[0]} ${array[array.length -1].slice(0,1)}.`;
+  return nombre;
+}
+
+function crearTarjeta(alumna) {
+  const card = document.createElement("div");
+  card.className = "card col-12 col-md-4 col-lg-3 m-3 px-0 border-info shadow-lg";
+
+  const img = document.createElement("img");
+  img.src = grupos[alumna.grupo].rutaFotos + alumna.foto;
+  img.alt = alumna.nombre;
+  img.className = "card-img-top";
+
+  const nombre = document.createElement("h5");
+  nombre.className = "card-title m-2";
+  // nombre.innerText = alumna.nombre;
+  nombre.innerText = sacarApellido(alumna.nombre);
+
+  const cardBody = document.createElement('div');
+  cardBody.className = "card-body";
+  cardBody.innerHTML = `<p class="card-text">${grupos[alumna.grupo].nombre}</p>`;
+
+  card.appendChild(img);
+  card.appendChild(nombre);
+  card.appendChild(cardBody);
+
+  container.appendChild(card)
+}
 
 function todas() {
   container.innerHTML = "";
   alumnas
     .forEach(alumna => {
-      const card = document.createElement("div");
-      card.className = "card col-12 col-md-4 col-lg-3 m-3 px-0 border-info shadow-lg";
-
-      const img = document.createElement("img");
-      img.src = grupos[alumna.grupo].rutaFotos + alumna.foto;
-      img.alt = alumna.nombre;
-      img.className = "card-img-top";
-
-      const nombre = document.createElement("h5");
-      nombre.className = "card-title m-2";
-      nombre.innerText = alumna.nombre;
-
-      const cardBody = document.createElement('div');
-      cardBody.className = "card-body";
-      cardBody.innerHTML = `<p class="card-text">${grupos[alumna.grupo].nombre}</p>`;
-
-      card.appendChild(img);
-      card.appendChild(nombre);
-      card.appendChild(cardBody);
-
-      container.appendChild(card)
+      crearTarjeta(alumna)
 
     })
 }
@@ -41,27 +53,7 @@ function alumnasPorEquipo(equipo) {
   alumnas
     .filter(alumna => alumna.grupo == equipo)
     .forEach(alumna => {
-      const card = document.createElement("div");
-      card.className = "card col-12 col-md-4 col-lg-3 m-3 px-0 border-info shadow-lg";
-
-      const img = document.createElement("img");
-      img.src = grupos[alumna.grupo].rutaFotos + alumna.foto;
-      img.alt = alumna.nombre;
-      img.className = "card-img-top";
-
-      const nombre = document.createElement("h5");
-      nombre.className = "card-title m-2";
-      nombre.innerText = alumna.nombre;
-
-      const cardBody = document.createElement('div');
-      cardBody.className = "card-body";
-      cardBody.innerHTML = `<p class="card-text">${grupos[alumna.grupo].nombre}</p>`;
-
-      card.appendChild(img);
-      card.appendChild(nombre);
-      card.appendChild(cardBody);
-
-      container.appendChild(card)
+      crearTarjeta(alumna)
 
     })
 }

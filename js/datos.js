@@ -42,7 +42,7 @@ const alumnas = [
   //   foto: "florencia.jpg"
   // },
   {
-    nombre: "Ma. Gabriela Vallenilla",
+    nombre: "María Gabriela Vallenilla",
     grupo: "notfound",
     foto: "gabriela.jpg"
   },
@@ -57,7 +57,7 @@ const alumnas = [
   //   foto: "yael.jpg"
   // },
   {
-    nombre: "Andrea briceño",
+    nombre: "Andrea Briceño",
     grupo: "cq",
     foto: "andrea.jpg"
   },
